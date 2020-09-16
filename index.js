@@ -59,7 +59,7 @@ async function sendPushNotification() {
 // app.post("/api/subscribe", (req, res) => {});
 
 let job = new CronJob(
-  "0 */40 * * * *",
+  "0 */1 * * * *",
   sendPushNotification,
   null,
   true,
