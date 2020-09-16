@@ -39,7 +39,7 @@ async function sendPushNotification() {
   //create a payload
 
   const payload = JSON.stringify({
-    title: `1BTC = $${bitcoinPrice.toLocaleString()}`,
+    title: `1 BTC = $${bitcoinPrice.toLocaleString()}`,
     advice:
       bitcoinPrice < 10500
         ? "You may want to withraw right now. click to go to your wallet"
@@ -59,7 +59,7 @@ async function sendPushNotification() {
 // app.post("/api/subscribe", (req, res) => {});
 
 let job = new CronJob(
-  "0 */1 * * * *",
+  "0 */180 * * * *",
   sendPushNotification,
   null,
   true,
